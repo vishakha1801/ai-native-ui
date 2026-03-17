@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap');
+
+/* ── Design tokens ── */
+:root {
+  --ai-bg-base: #0b0d10;
+  --ai-bg-surface: #111318;
+  --ai-bg-elevated: #181c24;
+  --ai-bg-overlay: #1d2130;
+
+  --ai-border-subtle: rgba(255, 255, 255, 0.05);
+  --ai-border-default: rgba(255, 255, 255, 0.09);
+  --ai-border-strong: rgba(255, 255, 255, 0.16);
+
+  --ai-text-primary: #eef0f4;
+  --ai-text-secondary: #8892a4;
+  --ai-text-tertiary: #4e5768;
+  --ai-text-inverse: #0b0d10;
+
+  --ai-accent-amber: #a78bfa;
+  --ai-accent-amber-dim: rgba(167, 139, 250, 0.14);
+  --ai-accent-amber-subtle: rgba(167, 139, 250, 0.07);
+  --ai-accent-blue: #60a5fa;
+  --ai-accent-blue-dim: rgba(96, 165, 250, 0.15);
+  --ai-accent-green: #34d399;
+  --ai-accent-green-dim: rgba(52, 211, 153, 0.12);
+  --ai-accent-red: #f87171;
+  --ai-accent-red-dim: rgba(248, 113, 113, 0.12);
+
+  --ai-font-sans: "DM Sans", "Helvetica Neue", Arial, sans-serif;
+  --ai-font-mono: "DM Mono", "JetBrains Mono", "Fira Code", monospace;
+
+  --ai-text-xs: 0.6875rem;
+  --ai-text-sm: 0.8125rem;
+  --ai-text-base: 0.9375rem;
+  --ai-text-lg: 1.0625rem;
+  --ai-text-xl: 1.25rem;
+
+  --ai-leading-tight: 1.35;
+  --ai-leading-normal: 1.6;
+  --ai-leading-relaxed: 1.75;
+
+  --ai-space-1: 0.25rem;
+  --ai-space-2: 0.5rem;
+  --ai-space-3: 0.75rem;
+  --ai-space-4: 1rem;
+  --ai-space-5: 1.25rem;
+  --ai-space-6: 1.5rem;
+  --ai-space-8: 2rem;
+  --ai-space-10: 2.5rem;
+  --ai-space-12: 3rem;
+
+  --ai-radius-sm: 6px;
+  --ai-radius-md: 10px;
+  --ai-radius-lg: 14px;
+  --ai-radius-xl: 18px;
+  --ai-radius-full: 9999px;
+
+  --ai-shadow-sm: 0 1px 3px rgba(0,0,0,0.3), 0 1px 2px rgba(0,0,0,0.2);
+  --ai-shadow-md: 0 4px 12px rgba(0,0,0,0.4), 0 2px 4px rgba(0,0,0,0.2);
+  --ai-shadow-lg: 0 10px 30px rgba(0,0,0,0.5), 0 4px 10px rgba(0,0,0,0.3);
+
+  --ai-duration-fast: 120ms;
+  --ai-duration-normal: 200ms;
+  --ai-duration-slow: 350ms;
+  --ai-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ── Reset ── */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--ai-bg-base);
+  color: var(--ai-text-primary);
+  font-family: var(--ai-font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: var(--ai-leading-normal);
+}
+
+img, svg { display: block; max-width: 100%; }
+button { font-family: inherit; }
+a { color: inherit; }
+
+/* ── Utility ── */
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0,0,0,0); white-space: nowrap; border-width: 0;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--ai-border-default); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--ai-border-strong); }
+
+/* ── Code ── */
+code {
+  font-family: var(--ai-font-mono);
+  font-size: 0.875em;
+  background: var(--ai-bg-elevated);
+  padding: 2px 5px;
+  border-radius: 4px;
+  color: var(--ai-accent-amber);
+}
+
+pre code {
+  background: none;
+  padding: 0;
+  color: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

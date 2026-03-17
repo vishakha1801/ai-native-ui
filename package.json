@@ -1,0 +1,10 @@
+{
+  "name": "ai-native-ui-monorepo",
+  "private": true,
+  "workspaces": ["packages/*"],
+  "scripts": {
+    "build": "npm run build --workspace=packages/ai-ui",
+    "dev": "npm run dev --workspace=packages/docs",
+    "typecheck": "npm run typecheck --workspace=packages/ai-ui"
+  }
+}
